@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Love Museum Web log in</title>
+      <script src="js/underscore.js"></script>
+      <script src="js/todos.js"></script>
+    </head>
+    <body>
+      <div class="title">
+          <h1>Love Museum </h1>
+      </div>
+        <div >
+            帳號：<input type="text" placeholder="Email"  >
+         
+            密碼：<input type="" placeholder="Password" id="p1" >
+        
+            密碼確認：<input type="" placeholder="Password2" id="p2" >
+          
+            <input type="button" value="Log in" onclick="check()">
+          
+            <script language=javascript>
+                
+                function check(){
+                  
+                    if(p1.value==p2.value){
+                       
+                        return true
+                    }
+                    else{
+                        document.write("兩個密碼不一致");
+                        return false
+                    }
+                }
+            </script>
+            
+            
+        </div>
+  
+    </body>
+</html>
