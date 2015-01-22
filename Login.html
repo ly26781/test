@@ -12,30 +12,23 @@
       </div>
         <div >
             帳號：<input type="text" placeholder="Email"  >
-         
-            密碼：<input type="" placeholder="Password" id="p1" >
-        
-            密碼確認：<input type="" placeholder="Password2" id="p2" >
-          
-            <input type="button" value="Log in" onclick="check()">
-          
+           <p> 密碼：<input type="" placeholder="Password" id="p1" ></p>
+           <p> 密碼確認：<input type="" placeholder="CheckPassword" id="p2" ></p> 
+            <P><span id="pw"></span></P>
+            <input type="button" value=" OK " onclick="check()">
+            
             <script language=javascript>
-                
                 function check(){
-                  
                     if(p1.value==p2.value){
-                       
-                        return true
+                        return true;
                     }
                     else{
-                        document.write("兩個密碼不一致");
-                        return false
-                    }
+                        document.getElementById("pw").innerHTML="<font>密碼不相同</font>";
+                        p1.value="";
+                        p2.value="";
+                    }  
                 }
             </script>
-            
-            
         </div>
-  
     </body>
 </html>
