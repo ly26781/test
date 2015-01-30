@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>sign</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="stylesheets/screen.css" media="all" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+        
+        <!-- Loading Bootstrap -->
+   		<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    	<!-- Loading Flat UI -->
+    	<link href="dist/css/flat-ui.css" rel="stylesheet">
+    	<link href="docs/assets/css/demo.css" rel="stylesheet">
+    	<link rel="shortcut icon" href="img/favicon.ico">
+
+    	<!-- Todo-parse Javascript -->
+    	
+    	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    	<script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+        
+        <!--//JavaScript寫在這裡-->
+        <script type="text/javascript">				
+            Parse.initialize("19BDOaHH86XPBfrBbpr4skyC0efMHQQKRdYi2Dzt","zFnzw3ICGaSB9dVxHWr9tOTRzn15v79DU3l5Sv5Y");
+						
+            //判斷密碼是否一樣           
+            function check(){ 
+                var username = e1.value;
+                var password = p1.value;
+                
+                if(p1.value==p2.value){   //密碼一樣就會去跑signUpToParse
+                    signUpToParse();
+                    return true;  
+                }
+                else{           //不一樣就會顯示錯誤
+                    document.getElementById("pw").innerHTML="密碼不相符，請重新輸入";
+                    p1.value="";
+                    p2.value="";
+                }  
+            }
+            
+            //判斷帳號是否重複           
+            function signUpToParse() {
+                var username = e1.value;
+                var password = p1.value;
+                var password2 = p2.value;
+                
+                Parse.User.signUp(username, password, null, {  //去撈資料庫的資料核對是否有重複
+                    success: function(user) {
+                        window.location.href="http://www.pinterest.com/";  	
+                    },
+
+                    error: function(user, error) {  //有重複顯示錯誤
+                        document.getElementById("email-auth-no").innerHTML="帳號已有人使用，請重新輸入!";
+                        e1.value="";
+                        p1.value="";
+                        p2.value="";
+                    }
+                });
+            }
+        </script>
+    </head>
+    
+    <body >
+        <div class="navigation">
+            <div class="navigation2">
+                <div class="signmember">
+                    <h1>註冊會員</h1>
+                    <form class="forma">
+                        <h6><label>Email</label><input type="text" name="fname" id="e1"/></h6>
+                        <h6><label>密　碼</label><input type="password" name="lname" id="p1" placeholder=""/></h6>
+                        <h6><label>確認密碼</label><input type="password" name="lname" id="p2" placeholder=""/></h6>
+                    </form>
+                    <div class="bn-sign">
+                        <a  class="btn btn-block btn-lg btn-primary" onclick="check()">註冊</a>
+                    </div>	
+                    <p><span id="pw"></span></p>  <!--密碼錯誤在這裡顯示-->
+                    <p><span id="email-auth-no"></span></p>   <!--帳號錯誤在這裡顯示-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

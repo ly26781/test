@@ -1,0 +1,190 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+.main-content .main-word-content a, .pagination-main-nav .main-word-content a, .about-content a, .ourprocedures-content a, .contacts-content .sent-form input[type="submit"] {
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid #b3afaf;
+  border-radius: 7px;
+  width: 180px;
+  word-spacing: 1px;
+}
+
+.about-content h3, .ourteam-content h3, .ourprocedures-content h3, .contacts-content h3, .surgeon-content h3, .FAQS-content h3 {
+  font-weight: 300;
+  font-size: 21px;
+  letter-spacing: 1px;
+  line-height: 26px;
+  color: #4e2c30;
+}
+
+.ourteam-content h2, .ourprocedures-content h2, .contacts-content h2, .surgeon-content h2 {
+  font-weight: 300;
+  font-size: 43px;
+  letter-spacing: 1px;
+  line-height: 48px;
+  color: #a57c4f;
+}
+
+/*註冊(sign.html)*/
+
+.logo{
+  color: #F6EB77;
+  padding-top: 50px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 120px;
+}
+.navigation{
+
+  background-image: url(../img/b3.jpg);
+
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.navigation  p{
+  color: white;
+  font-size: 16px;
+
+}
+.navigation2{
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.signmember{
+  padding: 30px;
+  position: absolute;
+  text-align: center;
+  background-color: #F6EB77 ;
+  height: 90%; 
+  width: 40%;
+  margin: 2.5% 0 0 25%;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.bn-sign{
+  float: right;
+  margin-right: 5%;
+}
+
+.bn-signup{
+
+}
+.btn-primary{
+   padding-left: 20%;
+}
+
+label{
+   padding: 20px;
+   display: block;
+}
+
+.forma{
+   display: block;
+   padding-top: 20px;
+}
+
+input{
+	padding: 10px;
+	border-radius: 5px ;
+	border: solid 1px rgba(254, 254, 254, 0.46);
+  background-color: rgba(254, 254, 254, 0.46);
+}
+
+/*註冊(sign.html)*/
+
+/*登入(html.html)*/
+.navigation{
+  text-align: center;
+/*	background-image: url(../img/siloginp.png);
+	width: 100%;
+ 	height: 100%;
+ 	background-repeat: no-repeat;*/
+}
+
+.bn-signin{
+	/*position: absolute;*/
+	/*padding: 340px 0 0 485px ;*/
+  margin-left: 50px;
+  text-align: center;
+	font-size: 14px;
+	font-style: italic;
+  color: #30E4DC;
+}
+
+.loginmember{
+  position: absolute;
+  text-align: center;
+  background-color: rgba(246, 235, 119, 0.46) ;
+  height: 50%; 
+  width: 30%;
+  margin: 2% 0 0 35%;
+    border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  /*padding: 30px;*/
+}
+
+/*登入(html.html)*/

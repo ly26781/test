@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Lovemuseum</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+  		<link href="stylesheets/screen.css" media="all" rel="stylesheet">
+  		<link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  		<!-- Loading Bootstrap -->
+   		<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    	<!-- Loading Flat UI -->
+    	<link href="dist/css/flat-ui.css" rel="stylesheet">
+    	<link href="docs/assets/css/demo.css" rel="stylesheet">
+    	<link rel="shortcut icon" href="img/favicon.ico">
+         <!-- Todo-parse Javascript -->
+
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>    	
+    	<script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+        
+        <!--JavaScript從這裡開始寫-->
+        <script type="text/javascript">				
+            Parse.initialize("19BDOaHH86XPBfrBbpr4skyC0efMHQQKRdYi2Dzt",
+                             "zFnzw3ICGaSB9dVxHWr9tOTRzn15v79DU3l5Sv5Y");
+            
+            function check(){ //check開始動作
+                var username = e1.value;
+                var password = p1.value;
+                Parse.User.logIn(username,password, { //開始撈資料 
+                    success: function(user) {
+                        window.location.href="http://www.pinterest.com/";  	
+                    },
+                    error: function(user, error) {  //當資料錯誤時的反應
+                        document.getElementById("email").innerHTML="帳號或密碼有錯誤!";
+                        p1.value="";
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navigation">	
+            <h1 class="logo">LoveMuseum</h1>
+            <p>不管你是戀愛中或是單一團體，<br>在這裡盡情環遊屬於你的博物館</p>
+                <div class="loginmember">
+                    <form class="forma">
+                        <h6><label>Email</label><input type="email" name="fnamev" id="e1"/></h6>
+                        <h6><label>密　碼</label><input type="password" name="lname" id="p1"/></h6>
+                        <p><span id="email"></span></p>
+                    </form>
+                    <div class="bn-signin">
+                        <a href="sign.html">註冊</a>
+                    </div>
+                    <div class="bn-sign">
+                        <a  class="btn btn-block btn-lg btn-primary" onclick="check()">登入</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
